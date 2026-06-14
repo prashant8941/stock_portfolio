@@ -19,8 +19,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await API.post("/auth/login", form);
-    //   login(res.data.user.name, res.data.token);
+      const res = await API.post("/api/auth/login", form);
       login(res.data.user, res.data.token);
     } catch (error) {
       alert(error.response?.data?.message || "Login failed");
@@ -53,7 +52,7 @@ const Login = () => {
         <button type="submit">Login</button>
 
         <p>
-          Don't have an account? <Link to="/register">Register</Link>
+          Don&apos;t have an account? <Link to="/register">Register</Link>
         </p>
       </form>
     </div>
