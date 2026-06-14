@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import StockForm from "../components/StockForm";
 import StockList from "../components/StockList";
 import PortfolioSummary from "../components/PortfolioSummary";
+
 import AiInsights from "../components/AiInsights";
 
 const Dashboard = () => {
