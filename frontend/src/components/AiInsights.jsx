@@ -15,7 +15,7 @@ const AiInsights = ({ stocks }) => {
       setLoading(true);
       setInsight("");
 
-      const res = await API.post("/ai/analyze", { stocks });
+      const res = await API.post("/api/ai/analyze", { stocks });
 
       setInsight(res.data.analysis);
     } catch (error) {
