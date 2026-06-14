@@ -4,7 +4,6 @@ import Navbar from "../components/Navbar";
 import StockForm from "../components/StockForm";
 import StockList from "../components/StockList";
 import PortfolioSummary from "../components/PortfolioSummary";
-
 import AiInsights from "../components/AiInsights";
 
 const Dashboard = () => {
@@ -13,7 +12,7 @@ const Dashboard = () => {
 
   const fetchStocks = async () => {
     try {
-      const res = await API.get("/stocks");
+      const res = await API.get("/api/stocks");
       setStocks(res.data);
     } catch (error) {
       alert("Failed to fetch stocks");

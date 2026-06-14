@@ -7,7 +7,7 @@ const StockList = ({ stocks, fetchStocks, setEditStock }) => {
     if (!confirmDelete) return;
 
     try {
-      await API.delete(`/stocks/${id}`);
+      await API.delete(`/api/stocks/${id}`);
       alert("Stock deleted successfully");
       fetchStocks();
     } catch (error) {

@@ -45,10 +45,10 @@ const StockForm = ({ fetchStocks, editStock, setEditStock }) => {
 
     try {
       if (editStock) {
-        await API.put(`/stocks/${editStock._id}`, form);
+        await API.put(`/api/stocks/${editStock._id}`, form);
         alert("Stock updated successfully");
       } else {
-        await API.post("/stocks", form);
+        await API.post("/api/stocks", form);
         alert("Stock added successfully");
       }
 
